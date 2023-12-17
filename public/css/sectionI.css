@@ -17,7 +17,7 @@ article.sectionI div.containerSectionI div.bt-container{
     background: rgba(213, 48, 32, 0.5);
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(213, 48, 32, 0.5) ;
-    cursor: pointer;
+    
     /* box-shadow: 0 0 0 0 rgba(0, 0, 0, 1); */
     /* display: flex;
     justify-content: center;
@@ -42,6 +42,9 @@ article.sectionI div.containerSectionI div.bt-container div.bt-container-questio
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
 }
 article.sectionI div.containerSectionI div.bt-container div.bt-container-question p.bt-question{
     font-size: 1.3rem;
@@ -56,7 +59,7 @@ article.sectionI div.containerSectionI div.bt-container div.sectionI-text{
     opacity: 0;
 }
 article.sectionI div.containerSectionI div.bt-container:hover div.sectionI-text{
-    animation: forwards fadeIn .7s .5s ease-in-out;
+    animation: forwards fadeIn .4s .4s ease-in-out;
 }
 @keyframes fadeIn {
     0%{
@@ -65,4 +68,38 @@ article.sectionI div.containerSectionI div.bt-container:hover div.sectionI-text{
     100%{
         opacity: 1;
     }
+}
+
+article.sectionI div.containerSectionI div.bt-container div.sectionI-text h2.sectionI-title{
+    text-align: center;
+    font-family: var(--Fuente-Raleway);
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+
+article.sectionI div.containerSectionI div.bt-container div.sectionI-text p.sectionI-paraf{
+    margin: .7rem 0 .7rem 0;
+    font-size: 1.1rem;
+}
+
+article.sectionI div.containerSectionI div.bt-container div.sectionI-text div.container-sectionI-redirect{
+    margin-top: 1rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+article.sectionI div.containerSectionI div.bt-container div.sectionI-text div.container-sectionI-redirect a.sectionI-redirect{
+    text-align: center;
+    text-decoration: none;
+    border-radius: 12px;
+    color: var(--B-azulado);
+    padding: .4rem 1rem;
+    background-color: var(--grisaceo);
+    transition: all .5s ease-in-out;
+}
+article.sectionI div.containerSectionI div.bt-container div.sectionI-text div.container-sectionI-redirect a.sectionI-redirect:hover {
+    background-color: var(--A-claro);
+    color: var(--A-medianoche);
+    box-shadow: 0 0 20px rgba(99,129,171, 1);
 }
