@@ -1,6 +1,8 @@
 const menuButton = document.getElementById('open-menu');
 const navbar = document.querySelector('.navbar');
-
+//desktop a partir de 1024px
+const menuButtonDesktop = document.getElementById('menu-open-desk');
+const navbarDesktop = document.querySelector('.navbar-container')
 // Mostrar el menú al hacer clic en el botón
 menuButton.addEventListener('click', function() {
     navbar.classList.toggle('show');
@@ -18,6 +20,27 @@ document.addEventListener('click', function(event) {
         menuButton.classList.remove('hide'); 
     }
 });
+
+//interaccion en desktop a partir de 1024px
+
+menuButtonDesktop.addEventListener('click', function() {
+    navbarDesktop.classList.toggle('show');
+    menuButtonDesktop.classList.toggle('hide');
+    
+});
+
+// Ocultar el menú al hacer clic fuera de él
+document.addEventListener('click', function(event) {
+    const isClickInsideNavbar = navbarDesktop.contains(event.target);
+    const isClickInsideButton = menuButtonDesktop.contains(event.target);
+
+    if (!isClickInsideNavbar && !isClickInsideButton) {
+        navbarDesktop.classList.remove('show');
+        menuButtonDesktop.classList.remove('hide'); 
+    }
+});
+//fin del 1024px
+
 //al refrescar la pagina se vuelve arroba
 window.onload = function() {
     // Desplazamiento suave hacia arriba al recargar la página
